@@ -1,6 +1,13 @@
 spring:
   application:
     name: say-hello
-
+  cloud:
+    inetutils:
+      prefer-ip-address: true # 根据需要设置其他属性
+    nacos:
+      ip-type: IPv4
+      discovery:
+        server-addr: '127.0.0.1:8848'
+        service-name: 'say-hello'
 server:
   port: 8090
